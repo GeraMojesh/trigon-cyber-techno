@@ -1,0 +1,17 @@
+# ═══════════════════════════════════════════════════
+#  Trigon Cyber-Tech — robots.txt
+#  https://trigoncybertechno.dpdns.org/
+# ═══════════════════════════════════════════════════
+
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+Sitemap: https://trigoncybertechno.dpdns.org/sitemap.xml
