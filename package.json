@@ -4,7 +4,7 @@
     "dev:agentation": "vite --config trigon-cyber-web/vite.config.js",
     "build": "vite build --config trigon-cyber-web/vite.config.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "@vitejs/plugin-react": "^6.0.2",
     "agentation": "^3.0.2",
     "react": "^19.2.7",
