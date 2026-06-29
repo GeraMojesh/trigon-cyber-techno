@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "vite --config trigon-cyber-web/vite.config.js",
-    "dev:agentation": "vite --config trigon-cyber-web/vite.config.js"
+    "dev:agentation": "vite --config trigon-cyber-web/vite.config.js",
+    "build": "vite build --config trigon-cyber-web/vite.config.js"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.2",
