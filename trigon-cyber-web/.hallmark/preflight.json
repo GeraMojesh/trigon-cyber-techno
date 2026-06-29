@@ -1,0 +1,8 @@
+{
+  "scanned": "2026-06-11",
+  "fontStack": "Space Grotesk, Sora, Inter, JetBrains Mono (Google Fonts, index.html L17)",
+  "palette": "Orange #F97316 + navy gradients (site.css)",
+  "motion": "motion-cut (vanilla JS scroll observers)",
+  "spacing": "rem-based ad hoc (site.css)",
+  "framework": "vanilla HTML + ES modules"
+}

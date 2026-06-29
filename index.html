@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigon CyberOS — Cybersecurity & AI Platform</title>
+    <meta name="description" content="Trigon Cyber-Tech is a deep-tech cybersecurity and AI intelligence platform powered by the Internet Computer Protocol.">
+    <link rel="stylesheet" href="src/frontend/terminal.css">
+    <link rel="stylesheet" href="src/frontend/site.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ═══ FIXED NAVBAR ══════════════════════════════════════════ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <img src="src/frontend/assets/t_logo.png" alt="Trigon Logo" class="logo-img">
+                <span class="logo-text">TRIGON</span>
+                <span class="logo-sub">CYBER-TECH</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Terminal</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#hero" class="nav-cta">Launch Terminal</a>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO — TERMINAL IS THE LANDING PAGE ══════════════════ -->
+    <section id="hero" class="hero-section">
+        <!-- Background Canvas -->
+        <canvas id="cyber-bg"></canvas>
+        <div class="crt-overlay"></div>
+        <div id="dragon-bg"></div>
+
+        <div class="hero-content">
+            <!-- Title above terminal -->
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                LIVE — Trigon CyberOS v2.1 — AI Cybersecurity Platform
+            </div>
+
+            <!-- Embedded Terminal — full priority -->
+            <div class="terminal-wrapper hero-terminal">
+                <div class="terminal-topbar">
+                    <div class="topbar-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="topbar-title">cyberos@trigon:~</div>
+                    <div class="topbar-status"><span class="status-dot"></span>SECURE</div>
+                </div>
+                <div class="terminal-container" id="terminal-container">
+                    <div id="terminal-output"></div>
+                    <div class="terminal-input-wrapper">
+                        <span class="prompt">cyberos@trigon:~$</span>
+                        <div class="input-container">
+                            <input type="text" id="command-input" autocomplete="off" spellcheck="false" autofocus>
+                            <div id="auto-suggestion-box"></div>
+                        </div>
+                    </div>
+                    <div id="loading-indicator">Processing...</div>
+                </div>
+                <div class="shortcuts-panel" id="shortcuts-panel">
+                    <div class="shortcuts-header">QUICK COMMANDS <span class="blink">_</span></div>
+                    <div class="shortcuts-grid" id="shortcuts-grid"></div>
+                </div>
+            </div>
+
+            <!-- Scroll hint below terminal -->
+            <div class="hero-scroll-hint">
+                <span>Scroll to explore the platform</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ ABOUT ════════════════════════════════════════════════ -->
+    <section id="about" class="page-section about-section">
+        <div class="section-container">
+            <div class="section-label">// ABOUT US</div>
+            <h2 class="section-heading">Redefining<br><span class="gradient-text">Cyber Intelligence</span></h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-desc">Trigon Cyber-Tech is a pioneering cybersecurity and artificial intelligence company building the next generation of threat intelligence platforms. Operating at the intersection of AI and blockchain on the Internet Computer Protocol, we deliver enterprise-grade security solutions with unprecedented transparency and resilience.</p>
+                    <p class="about-desc">Our platform integrates deep learning models with real-time threat databases to provide organizations with actionable intelligence against evolving cyber threats — from phishing attacks to advanced persistent threats (APTs).</p>
+                    <div class="about-pillars">
+                        <div class="pillar">
+                            <div class="pillar-icon">🛡️</div>
+                            <div class="pillar-info">
+                                <strong>Zero-Trust Security</strong>
+                                <span>Never trust, always verify across every layer</span>
+                            </div>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon">🧠</div>
+                            <div class="pillar-info">
+                                <strong>AI-First Intelligence</strong>
+                                <span>ML models trained on billions of threat signals</span>
+                            </div>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-icon">⛓️</div>
+                            <div class="pillar-info">
+                                <strong>Decentralized Infrastructure</strong>
+                                <span>Powered by Internet Computer Protocol</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-core-ring ring-1"></div>
+                    <div class="about-core-ring ring-2"></div>
+                    <div class="about-core-ring ring-3"></div>
+                    <div class="about-core-center">
+                        <span class="about-core-label">TRIGON</span>
+                        <span class="about-core-sub">CORE AI</span>
+                    </div>
+                    <div class="about-metrics">
+                        <div class="metric fade-in" data-delay="0">
+                            <div class="metric-value counter" data-target="99">0</div>
+                            <div class="metric-unit">%</div>
+                            <div class="metric-label">Threat Accuracy</div>
+                        </div>
+                        <div class="metric fade-in" data-delay="200">
+                            <div class="metric-value counter" data-target="24">0</div>
+                            <div class="metric-unit">/7</div>
+                            <div class="metric-label">Monitoring</div>
+                        </div>
+                        <div class="metric fade-in" data-delay="400">
+                            <div class="metric-value counter" data-target="500">0</div>
+                            <div class="metric-unit">ms</div>
+                            <div class="metric-label">Threat Response</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SERVICES ══════════════════════════════════════════════ -->
+    <section id="services" class="page-section services-section">
+        <div class="section-container">
+            <div class="section-label">// CAPABILITIES</div>
+            <h2 class="section-heading">Our <span class="gradient-text">Security Stack</span></h2>
+            <p class="section-sub">Six specialized AI-powered modules designed to protect, detect, and respond across your entire attack surface.</p>
+            <div class="services-grid">
+                <div class="service-card fade-in" data-delay="0">
+                    <div class="service-icon-wrap"><div class="service-icon">🤖</div></div>
+                    <h3 class="service-title">AI Threat Detection</h3>
+                    <p class="service-desc">Real-time machine learning models that identify and classify threats across network traffic, endpoints, and behavioural patterns.</p>
+                    <div class="service-tag">ACTIVE</div>
+                </div>
+                <div class="service-card fade-in" data-delay="100">
+                    <div class="service-icon-wrap"><div class="service-icon">📧</div></div>
+                    <h3 class="service-title">Phishing Email Analyzer</h3>
+                    <p class="service-desc">Deep NLP analysis of email content, headers, and sender reputation to catch sophisticated phishing campaigns before they reach inboxes.</p>
+                    <div class="service-tag">ACTIVE</div>
+                </div>
+                <div class="service-card fade-in" data-delay="200">
+                    <div class="service-icon-wrap"><div class="service-icon">🔗</div></div>
+                    <h3 class="service-title">Malicious Link Scanner</h3>
+                    <p class="service-desc">Multi-layer URL analysis combining reputation databases, sandboxing, and AI scoring to evaluate link safety in milliseconds.</p>
+                    <div class="service-tag">ACTIVE</div>
+                </div>
+                <div class="service-card fade-in" data-delay="300">
+                    <div class="service-icon-wrap"><div class="service-icon">🔍</div></div>
+                    <h3 class="service-title">Steganography Detection</h3>
+                    <p class="service-desc">Advanced pixel and metadata analysis to uncover hidden data payloads embedded within images, audio, and document files.</p>
+                    <div class="service-tag">BETA</div>
+                </div>
+                <div class="service-card fade-in" data-delay="400">
+                    <div class="service-icon-wrap"><div class="service-icon">🧩</div></div>
+                    <h3 class="service-title">Cyber Intelligence Engine</h3>
+                    <p class="service-desc">Aggregated threat intelligence from global sensors, dark web monitoring, and OSINT feeds with automated correlation.</p>
+                    <div class="service-tag">ACTIVE</div>
+                </div>
+                <div class="service-card fade-in" data-delay="500">
+                    <div class="service-icon-wrap"><div class="service-icon">📊</div></div>
+                    <h3 class="service-title">Enterprise Dashboards</h3>
+                    <p class="service-desc">Executive-ready security dashboards with live telemetry, risk scoring, compliance tracking, and automated incident reporting.</p>
+                    <div class="service-tag">ACTIVE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ TEAM ═══════════════════════════════════════════════════ -->
+    <section id="team" class="page-section team-section">
+        <div class="section-container">
+            <div class="section-label">// THE TEAM</div>
+            <h2 class="section-heading">The <span class="gradient-text">Architects</span></h2>
+            <p class="section-sub">The visionaries driving Trigon's mission to redefine cybersecurity for the decentralized era.</p>
+            <div class="team-grid">
+                <div class="team-card fade-in" data-delay="0">
+                    <div class="team-card-glow"></div>
+                    <div class="team-img-wrap">
+                        <img src="src/frontend/assets/founder.jpg" alt="G Mojesh" class="team-img">
+                        <div class="team-img-ring"></div>
+                    </div>
+                    <div class="team-info">
+                        <div class="team-role">Founder</div>
+                        <h3 class="team-name">G Mojesh</h3>
+                        <p class="team-bio">Visionary architect behind Trigon. Pioneering next-generation cybersecurity solutions at the intersection of AI and decentralized infrastructure.</p>
+                        <div class="team-tags">
+                            <span class="team-tag">Cybersecurity</span>
+                            <span class="team-tag">AI Strategy</span>
+                            <span class="team-tag">ICP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card fade-in featured-card" data-delay="150">
+                    <div class="team-card-glow featured-glow"></div>
+                    <div class="team-img-wrap">
+                        <img src="src/frontend/assets/ceo.jpg" alt="J Vinay" class="team-img">
+                        <div class="team-img-ring featured-ring"></div>
+                    </div>
+                    <div class="team-info">
+                        <div class="team-role">Co-Founder & CEO</div>
+                        <h3 class="team-name">J Vinay</h3>
+                        <p class="team-bio">Leading strategic operations and executive decisions at Trigon. Driving the company's growth and positioning Trigon as a global cyber intelligence leader.</p>
+                        <div class="team-tags">
+                            <span class="team-tag">Leadership</span>
+                            <span class="team-tag">Strategy</span>
+                            <span class="team-tag">Operations</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card fade-in" data-delay="300">
+                    <div class="team-card-glow partner-glow"></div>
+                    <div class="team-img-wrap">
+                        <img src="src/frontend/assets/partner.jpg" alt="Sri Vardhan Yeluri" class="team-img">
+                        <div class="team-img-ring partner-ring"></div>
+                    </div>
+                    <div class="team-info">
+                        <div class="team-role">Strategic Partner</div>
+                        <h3 class="team-name">Sri Vardhan Yeluri</h3>
+                        <p class="team-bio">Founder & CEO at SRIPTO. Bringing deep-tech expertise and strategic partnerships that accelerate Trigon's product roadmap and market reach.</p>
+                        <div class="team-tags">
+                            <span class="team-tag">Deep-Tech</span>
+                            <span class="team-tag">SRIPTO</span>
+                            <span class="team-tag"><a href="https://www.sripto.tech/" target="_blank" style="color:inherit;text-decoration:none;">sripto.tech ↗</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PROJECTS ══════════════════════════════════════════════ -->
+    <section id="projects" class="page-section projects-section">
+        <div class="section-container">
+            <div class="section-label">// ACTIVE INITIATIVES</div>
+            <h2 class="section-heading">Live <span class="gradient-text">Projects</span></h2>
+            <p class="section-sub">Production deployments currently running on the Internet Computer Protocol.</p>
+            <div class="projects-grid">
+                <div class="project-card fade-in" data-delay="0">
+                    <div class="project-header">
+                        <div class="project-num">01</div>
+                        <div class="project-status active-status">● ACTIVE</div>
+                    </div>
+                    <h3 class="project-title">CyberOS Terminal Platform</h3>
+                    <p class="project-desc">Decentralized operations terminal deployed on ICP. Command-driven cybersecurity intelligence interface with real-time threat query capabilities.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Motoko</span>
+                        <span class="tech-tag">ICP</span>
+                        <span class="tech-tag">WebGL</span>
+                    </div>
+                    <div class="project-bar"><div class="project-progress" style="width:85%"></div></div>
+                    <div class="project-progress-label">Deployment: 85%</div>
+                </div>
+                <div class="project-card fade-in" data-delay="150">
+                    <div class="project-header">
+                        <div class="project-num">02</div>
+                        <div class="project-status active-status">● ACTIVE</div>
+                    </div>
+                    <h3 class="project-title">Trigon Threat Scanner</h3>
+                    <p class="project-desc">Enterprise-grade vulnerability detection engine powered by machine learning. Scans domains, IPs, and applications for exploitable weaknesses in real-time.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">ML</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+                    <div class="project-bar"><div class="project-progress" style="width:70%"></div></div>
+                    <div class="project-progress-label">Development: 70%</div>
+                </div>
+                <div class="project-card fade-in" data-delay="300">
+                    <div class="project-header">
+                        <div class="project-num">03</div>
+                        <div class="project-status beta-status">◎ BETA</div>
+                    </div>
+                    <h3 class="project-title">AI Security Engine</h3>
+                    <p class="project-desc">Core machine learning threat classification system. Trained on massive datasets of malicious patterns to provide near-instant verdict on suspicious activity.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">ONNX</span>
+                        <span class="tech-tag">Edge AI</span>
+                    </div>
+                    <div class="project-bar"><div class="project-progress beta-progress" style="width:50%"></div></div>
+                    <div class="project-progress-label">Research: 50%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══════════════════════════════════════════════ -->
+    <section id="contact" class="page-section contact-section">
+        <div class="section-container">
+            <div class="section-label">// GET IN TOUCH</div>
+            <h2 class="section-heading">Start a <span class="gradient-text">Conversation</span></h2>
+            <p class="section-sub">Ready to secure your organization? Reach out to the Trigon team.</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📡</div>
+                        <div class="contact-text">
+                            <strong>Platform</strong>
+                            <span>Internet Computer Protocol (ICP)</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-text">
+                            <strong>Partner</strong>
+                            <a href="https://www.sripto.tech/" target="_blank" style="color:var(--neon-green)">sripto.tech</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🤝</div>
+                        <div class="contact-text">
+                            <strong>Collaborations</strong>
+                            <span>Enterprise & Research inquiries welcome</span>
+                        </div>
+                    </div>
+                    <div class="contact-terminal-hint">
+                        <code>→ Type <span class="cmd-highlight">contact</span> in the terminal above</code>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-input" placeholder="Your name" id="form-name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" placeholder="your@email.com" id="form-email">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-input form-textarea" placeholder="Tell us about your security needs..." id="form-message"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+                        <span>Send Message</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                    </button>
+                    <div id="form-status" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═════════════════════════════════════════════════ -->
+    <footer id="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="src/frontend/assets/t_logo.png" alt="Trigon" class="footer-logo">
+                    <div>
+                        <div class="footer-brand-name">TRIGON CYBER-TECH</div>
+                        <div class="footer-brand-tag">Cybersecurity & AI Intelligence Platform</div>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <div class="footer-col-title">Platform</div>
+                        <a href="#hero">CyberOS Terminal</a>
+                        <a href="#services">Security Services</a>
+                        <a href="#projects">Projects</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Company</div>
+                        <a href="#about">About Trigon</a>
+                        <a href="#team">Our Team</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Partner</div>
+                        <a href="https://www.sripto.tech/" target="_blank">SRIPTO ↗</a>
+                        <a href="https://www.sripto.tech/" target="_blank">sripto.tech ↗</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copy">© 2026 Trigon Cyber-Tech. Built on Internet Computer Protocol.</div>
+                <div class="footer-status">
+                    <span class="status-dot"></span>
+                    All Systems Operational
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Spatial Cards (popup system) -->
+    <div id="spatial-universe">
+        <div id="card-founder" class="spatial-card">
+            <img class="card-image" src="src/frontend/assets/founder.jpg" alt="Founder">
+            <h2 class="card-title">Founder of Trigon</h2>
+            <h3 class="card-name">G Mojesh</h3>
+            <p class="card-desc">Visionary architect behind Trigon. Pioneering future Cybersecurity solutions.</p>
+        </div>
+        <div id="card-ceo" class="spatial-card">
+            <img class="card-image" src="src/frontend/assets/ceo.jpg" alt="CEO">
+            <h2 class="card-title">Co-Founder & CEO</h2>
+            <h3 class="card-name">J Vinay</h3>
+            <p class="card-desc">Leading strategic operations and executive decisions at Trigon.</p>
+        </div>
+        <div id="card-partner" class="spatial-card">
+            <img class="card-image" src="src/frontend/assets/partner.jpg" alt="Partner">
+            <h2 class="card-title">Partner</h2>
+            <h3 class="card-name">Sri Vardhan Yeluri</h3>
+            <p class="card-desc">Organization: Founder & CEO at SRIPTO<br>Website: <a href="https://www.sripto.tech/" target="_blank" style="color:var(--neon-green);text-decoration:none;">sripto.tech</a></p>
+        </div>
+        <div id="card-dashboard" class="spatial-card no-image">
+            <h2 class="card-title">INTERFACE</h2>
+            <h3 class="card-name">Cyber Defense Dashboard</h3>
+            <p class="card-desc">Active Threats: <span style="color:var(--neon-green)">0 (Secure)</span><br>Network Nodes: Online<br>Security Mode: Maximum<br><br><span style="color:var(--electric-blue)">Live telemetry connection established.</span></p>
+        </div>
+        <div id="card-features" class="spatial-card grid-card">
+            <h2 class="section-title">SYSTEM FEATURES</h2>
+            <div class="features-grid">
+                <div class="feature-box"><span class="feat-num">01</span><p>AI Threat Detection</p></div>
+                <div class="feature-box"><span class="feat-num">02</span><p>Phishing Email Analyzer</p></div>
+                <div class="feature-box"><span class="feat-num">03</span><p>Malicious Link Scanner</p></div>
+                <div class="feature-box"><span class="feat-num">04</span><p>Steganography Detection</p></div>
+                <div class="feature-box"><span class="feat-num">05</span><p>Cyber Intelligence Engine</p></div>
+                <div class="feature-box"><span class="feat-num">06</span><p>Enterprise Security Dashboards</p></div>
+            </div>
+        </div>
+        <div id="card-generic" class="spatial-card">
+            <img class="card-image" src="" alt="Dynamic Resource" style="display:none;">
+            <h2 class="card-title">Resource</h2>
+            <h3 class="card-name">Subject</h3>
+            <p class="card-desc">Information related to the command.</p>
+        </div>
+    </div>
+
+    <!-- Cinema overlay for popup backdrop -->
+    <div id="cinema-overlay"></div>
+
+    <!-- Close button — at root level, position:fixed, above everything -->
+    <button id="close-popup">×</button>
+
+    <script type="module" src="src/frontend/main.js"></script>
+    <script type="module" src="src/frontend/site.js"></script>
+</body>
+</html>

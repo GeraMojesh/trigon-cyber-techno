@@ -1,0 +1,242 @@
+/* Hallmark · macrostructure: Workbench · tone: atmospheric/technical
+ * glass3d integration + 60fps-style motion discipline
+ */
+
+html,
+body {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-md);
+  z-index: 10000;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-accent);
+  color: var(--color-paper);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus-visible {
+  top: var(--space-md);
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+#navbar {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+#navbar.scrolled {
+  background: transparent !important;
+}
+
+#navbar .nav-inner.glass3d {
+  width: 100%;
+}
+
+#navbar.scrolled .nav-inner.glass3d {
+  --radius-glass3d: var(--radius-full);
+  padding: 0.35rem 0.5rem 0.35rem 1rem;
+}
+
+.nav-inner.glass3d {
+  --radius-glass3d: 999px;
+  padding: 0.35rem 0.75rem;
+  max-width: min(1200px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.hero-badge.glass3d {
+  --radius-glass3d: var(--radius-full);
+}
+
+.terminal-wrapper.glass3d {
+  --radius-glass3d: var(--radius-lg);
+  --filter-glass3d: blur(24px) brightness(0.82) saturate(2.1);
+}
+
+.terminal-wrapper.glass3d .terminal-container {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+
+.service-card.glass3d,
+.team-card.glass3d,
+.project-card.glass3d,
+.kpi-card.glass3d,
+.dash-panel.glass3d,
+.contact-form.glass3d,
+.spatial-card.glass3d {
+  background: transparent !important;
+  border-color: hsl(205 25% 90% / 0.08) !important;
+}
+
+.service-card.glass3d::before,
+.team-card.glass3d::before,
+.project-card.glass3d::before {
+  display: none;
+}
+
+.service-card.glass3d,
+.team-card.glass3d,
+.project-card.glass3d,
+.kpi-card.glass3d {
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .service-card.glass3d:hover,
+  .team-card.glass3d:hover,
+  .project-card.glass3d:hover,
+  .kpi-card.glass3d:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.service-card.glass3d:focus-visible,
+.team-card.glass3d:focus-visible,
+.project-card.glass3d:focus-visible,
+.nav-link:focus-visible,
+.nav-cta:focus-visible,
+.btn-primary:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.nav-link,
+.nav-cta,
+.btn-primary,
+.shortcut-btn {
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .nav-cta:active,
+  .btn-primary:active {
+    transform: translateY(1px);
+  }
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.hero-scroll-hint {
+  animation: floatHint 3s var(--ease-in-out) infinite;
+}
+
+@keyframes floatHint {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-hint {
+    animation: none;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SVG ICON GLASS TREATMENT
+   KPI icons + dashboard panel titles use inline SVGs (encoding-safe,
+   replacing the old mojibake emoji). Render them as small glass chips
+   with the Trigon accent colours that match the glass3d palette.
+   ───────────────────────────────────────────────────────────── */
+
+/* KPI icons → glass "chip" with warm Trigon accent */
+.kpi-icon {
+  font-size: 0; /* neutralise old emoji sizing */
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 12px;
+  color: #F97316; /* Trigon orange accent */
+  background: hsl(24 90% 55% / 0.1);
+  border: 1px solid hsl(24 90% 60% / 0.22);
+  -webkit-backdrop-filter: blur(8px) saturate(1.6);
+  backdrop-filter: blur(8px) saturate(1.6);
+  box-shadow:
+    inset 1.5px 1.5px 1px -1px hsl(24 90% 90% / 0.4),
+    inset 0 0 0.25px 0.5px hsl(24 90% 90% / 0.06),
+    0 4px 10px -3px hsl(24 90% 30% / 0.35);
+  filter: drop-shadow(0 0 6px hsl(24 90% 55% / 0.35));
+}
+.kpi-icon svg {
+  width: 1.55rem;
+  height: 1.55rem;
+  display: block;
+}
+
+/* the "secure" KPI uses the success/green accent instead */
+.kpi-secure .kpi-icon {
+  color: #28c840;
+  background: hsl(132 60% 45% / 0.1);
+  border-color: hsl(132 60% 50% / 0.24);
+  box-shadow:
+    inset 1.5px 1.5px 1px -1px hsl(132 60% 90% / 0.4),
+    inset 0 0 0.25px 0.5px hsl(132 60% 90% / 0.06),
+    0 4px 10px -3px hsl(132 60% 25% / 0.35);
+  filter: drop-shadow(0 0 6px hsl(132 60% 45% / 0.35));
+}
+
+/* dashboard panel title icons → inline, tinted to match the teal glass */
+.dash-panel-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.dash-panel-title svg {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  color: var(--color-accent, #F97316);
+  filter: drop-shadow(0 0 4px hsl(24 90% 55% / 0.4));
+}
+
+@media (max-width: 768px) {
+  .kpi-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .kpi-icon svg {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}

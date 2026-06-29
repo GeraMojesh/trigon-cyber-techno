@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigon CyberOS - Deep-Tech AI Platform</title>
+    <link rel="stylesheet" href="terminal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@400;600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Canvas for Cyber Dragon & Elements -->
+    <canvas id="cyber-bg"></canvas>
+
+    <!-- CRT Overlay Effect -->
+    <div class="crt-overlay"></div>
+
+    <div id="hero">
+        <!-- Animated AI Core Background -->
+        <div id="dragon-bg"></div>
+
+        <div class="terminal-container" id="terminal-container">
+            <!-- Terminal Output Area -->
+            <div id="terminal-output"></div>
+
+            <!-- Command Input Area -->
+            <div class="terminal-input-wrapper">
+                <span class="prompt">cyberos@trigon:~$</span>
+                <div class="input-container">
+                    <input type="text" id="command-input" autocomplete="off" spellcheck="false" autofocus>
+                    <div id="auto-suggestion-box"></div>
+                </div>
+            </div>
+            
+            <!-- Command Loading Indicator (hidden by default) -->
+            <div id="loading-indicator">Processing...</div>
+        </div>
+
+        <!-- Quick Commands Shortcuts Panel -->
+        <div class="shortcuts-panel" id="shortcuts-panel">
+            <div class="shortcuts-header">QUICK COMMANDS <span class="blink">_</span></div>
+            <div class="shortcuts-grid" id="shortcuts-grid">
+                <!-- Buttons injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Scrollable Content Area -->
+    <main id="content-sections">
+        <section id="features" class="content-section">
+            <h2 class="section-title">SYSTEM FEATURES</h2>
+            <div class="cards-grid" id="features-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2 class="section-title">ACTIVE INITIATIVES</h2>
+            <div class="cards-grid" id="projects-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cinematic 3D Spatial Universe -->
+    <div id="spatial-universe">
+        <div id="card-founder" class="spatial-card">
+            <img class="card-image" src="assets/founder.jpg" alt="Founder">
+            <h2 class="card-title">Founder of Trigon</h2>
+            <h3 class="card-name">G Mojesh</h3>
+            <p class="card-desc">Visionary architect behind Trigon. Pioneering future Cybersecurity solutions.</p>
+        </div>
+        <div id="card-ceo" class="spatial-card">
+            <img class="card-image" src="assets/ceo.jpg" alt="CEO">
+            <h2 class="card-title">Co-Founder & CEO</h2>
+            <h3 class="card-name">J Vinay</h3>
+            <p class="card-desc">Leading strategic operations and executive decisions at Trigon.</p>
+        </div>
+        <div id="card-partner" class="spatial-card">
+            <img class="card-image" src="assets/partner.jpg" alt="Partner">
+            <h2 class="card-title">Partner</h2>
+            <h3 class="card-name">Sri Vardhan Yeluri</h3>
+            <p class="card-desc">Organization: Founder & CEO at SRIPTO<br>Website: <a href="https://www.sripto.tech/" target="_blank" style="color: var(--neon-green); text-decoration: none;">sripto.tech</a></p>
+        </div>
+        <div id="card-dashboard" class="spatial-card no-image">
+            <h2 class="card-title">INTERFACE</h2>
+            <h3 class="card-name">Cyber Defense Dashboard</h3>
+            <p class="card-desc">Active Threats: <span style="color:var(--neon-green)">0 (Secure)</span><br>Network Nodes: Online<br>Security Mode: Maximum<br><br><span style="color:var(--electric-blue)">Live telemetry connection established.</span></p>
+        </div>
+        <!-- Grid Layout for System Features -->
+        <div id="card-features" class="spatial-card grid-card">
+            <h2 class="section-title">SYSTEM FEATURES</h2>
+            <div class="features-grid">
+                <div class="feature-box"><span class="feat-num">01</span><p>AI Threat Detection</p></div>
+                <div class="feature-box"><span class="feat-num">02</span><p>Phishing Email Analyzer</p></div>
+                <div class="feature-box"><span class="feat-num">03</span><p>Malicious Link Scanner</p></div>
+                <div class="feature-box"><span class="feat-num">04</span><p>Steganography Detection</p></div>
+                <div class="feature-box"><span class="feat-num">05</span><p>Cyber Intelligence Engine</p></div>
+                <div class="feature-box"><span class="feat-num">06</span><p>Enterprise Security Dashboards</p></div>
+            </div>
+        </div>
+        <!-- Generic Card for Dynamic Outputs -->
+        <div id="card-generic" class="spatial-card">
+            <img class="card-image" src="" alt="Dynamic Resource" style="display: none;">
+            <h2 class="card-title">Resource</h2>
+            <h3 class="card-name">Subject</h3>
+            <p class="card-desc">Information related to the command.</p>
+        </div>
+    </div>
+
+    <!-- Screen Overlay when a card flies forward -->
+    <div id="cinema-overlay">
+        <button id="close-popup" class="shortcut-btn">X</button>
+    </div>
+
+    <script type="module" src="../../config/system.config.js"></script>
+    <script type="module" src="api.js"></script>
+    <script type="module" src="canvas-bg.js"></script>
+    <script type="module" src="terminal.js"></script>
+    <script type="module" src="command-engine.js"></script>
+    <script type="module" src="navigation.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

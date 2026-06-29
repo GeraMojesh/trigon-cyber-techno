@@ -1,0 +1,47 @@
+/* Hallmark · theme: cyber-glass · genre: atmospheric · Trigon Cyber-Tech
+ * paper: dark · display: grotesk-sans · accent: warm-orange + cool-cyan
+ */
+:root {
+  --color-paper: oklch(14% 0.02 260);
+  --color-paper-2: oklch(18% 0.03 250);
+  --color-paper-3: oklch(22% 0.04 245);
+  --color-ink: oklch(96% 0.01 260);
+  --color-muted: oklch(72% 0.02 260);
+  --color-accent: oklch(72% 0.18 45);
+  --color-accent-cool: oklch(68% 0.14 230);
+  --color-focus: oklch(78% 0.16 230);
+  --color-success: oklch(72% 0.17 145);
+  --color-danger: oklch(62% 0.22 25);
+
+  --font-display: "Space Grotesk", "Outfit", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.35rem;
+  --text-display-s: clamp(2rem, 4vw, 3rem);
+  --text-display: clamp(2.5rem, 6vw, 4.5rem);
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur-base: 280ms;
+  --dur-slow: 480ms;
+}
