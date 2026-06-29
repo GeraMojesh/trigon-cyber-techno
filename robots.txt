@@ -1,0 +1,26 @@
+# ═══════════════════════════════════════════════════
+#  Trigon Cyber-Tech — robots.txt
+#  https://trigoncybertechno.dpdns.org/
+# ═══════════════════════════════════════════════════
+
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Block access to private directories (none currently, but good practice)
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.specify/
+
+# ── Googlebot specific ──────────────────────────────
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# ── Bingbot specific ────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# ── Sitemap location ────────────────────────────────
+Sitemap: https://trigoncybertechno.dpdns.org/sitemap.xml
